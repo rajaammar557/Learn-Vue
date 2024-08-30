@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="vue.js"></script>
+</head>
+
+<body id="app" class="mt-5 grid place-items-center">
+    <btn>af</btn>
+    <btn>af</btn>
+    <btn>af</btn>
+</body>
+<script>
+    let app = {
+        components: {
+            'btn': {
+                template: `<button class="px-5 py-3 bg-gray-300 border-1 rounded hover:bg-gray-400 disabled:cursor-not-allowed" :disabled="processing"><slot /></button>`,
+                data() {
+                    return {
+                        processing: false,
+                    }
+                }
+            },
+        }
+    };
+    Vue.createApp(app).mount("#app");
+</script>
+
+</html>
