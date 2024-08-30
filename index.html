@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Vue</title>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="vue.js"></script>
 </head>
 
-<body class="h-100 grid place-center" id="app">
+<body class="h-100 grid place-items-center" id="app">
     <div>
         <input type="text" v-model="greeting" id="">
         <p>{{ greeting }} - ({{ greeting.length }})</p>
@@ -34,8 +35,8 @@
         },
         mounted() {
             setTimeout(() => {
-                this.greeting = 'Hello Universe';
-            }, 5000);
+                this.greeting = 'Hello There';
+            }, 2000);
         },
 
     }).mount('#app');
