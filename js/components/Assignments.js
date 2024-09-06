@@ -13,10 +13,10 @@ export default {
     data() {
         return {
             assignments: [
-                { id: 1, name: "Finish project", complete: true, },
-                { id: 2, name: "Read chapter 3", complete: false, },
-                { id: 3, name: "Do their homework", complete: false, },
-                { id: 4, name: "Test Yourslef", complete: false, },
+                { id: 1, name: "Finish project", tag: 'math', complete: true, },
+                { id: 2, name: "Read chapter 3", tag: 'english', complete: false, },
+                { id: 3, name: "Do their homework", tag: 'science', complete: false, },
+                { id: 4, name: "Test Yourslef", tag: 'math', complete: false, },
             ],
         }
     },
@@ -32,10 +32,6 @@ export default {
     },
     methods: {
 
-        handleAdd(newAssignment) {
-            console.log('New Assignment:', newAssignment);
-            // Handle the new assignment here
-        },
         add(name) {
             console.log(name);
             this.assignments.push({
