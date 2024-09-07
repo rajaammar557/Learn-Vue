@@ -33,7 +33,6 @@ export default {
     methods: {
 
         add(name) {
-            console.log(name);
             this.assignments.push({
                 id: this.assignments.length + 1,
                 name: name,
