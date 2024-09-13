@@ -1,19 +1,18 @@
 <script setup>
 
-import { inject } from 'vue'
 import { RouterLink } from 'vue-router'
-
-let quiz = inject('quiz')
+import { state } from "@/stores/quizStore";
 
 </script>
 
 <template>
     <div>
-        <h4>{{ quiz.name }}</h4>
+        <h4>{{ state.name }}</h4>
+        <button @click="state.name = 'A new quiz'">Click</button>
         <ul>
             <li><a href="#">Get a Job</a></li>
             <li>
-                <routerLink to="/contact">Contant us</routerLink>
+                <RouterLink to="/contact">Contant us</RouterLink>
             </li>
         </ul>
     </div>
