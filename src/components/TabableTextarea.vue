@@ -20,6 +20,6 @@ function onTabPress(e) {
 </script>
 
 <template>
-    <textarea @keydown.tab.prevent="onTabPress" @keyup="emit('update:modelValue', $evenet.traget.value)"
-        v-text="modelValue" />
+    <textarea @keydown.tab.prevent="onTabPress" @keyup="emit('update:modelValue', $event.target.value)"
+        :value="modelValue" />
 </template>

@@ -1,15 +1,9 @@
 <script setup>
-
-import { useFlash } from '@/composables/useFlash.js';
-
-let { flash } = useFlash();
-
+import Quiz  from "@/components/Quiz/Quiz.vue";
 </script>
 
 <template>
   <main>
-    <p>
-      <button @click="flash('Its Work')">Click me</button>
-    </p>
+    <Quiz :quiz="{ name: 'My first Quiz', question: [] }" />
   </main>
 </template>
