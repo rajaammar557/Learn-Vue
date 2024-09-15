@@ -1,8 +1,6 @@
 <script setup>
-
-defineProps({
-    team: Object,
-})
+import { useTeamStore } from '@/stores/TeamStore';
+let team = useTeamStore();
 </script>
 
 <template>
