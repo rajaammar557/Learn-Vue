@@ -21,5 +21,5 @@ function onTabPress(e) {
 
 <template>
     <textarea @keydown.tab.prevent="onTabPress" @keyup="emit('update:modelValue', $event.target.value)"
-        :value="modelValue" />
+        :value="modelValue" class="dark:bg-transparent" />
 </template>
